@@ -15,7 +15,7 @@ class Saklar1 extends Migration
     {
         Schema::create('saklar1', function (Blueprint $table) {
             $table->id();
-            $table->integer('value');
+            $table->float('value');
             $table->timestamps();
         });
     }

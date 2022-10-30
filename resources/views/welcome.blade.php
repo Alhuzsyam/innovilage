@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background: #365372;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -81,10 +81,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="{{ asset('assets/image/logo.png') }}" alt="" srcset="" style="width: 15rem;">
+                </div>
+                <div class="title m-b-md">
+                    API Server
                 </div>
 
-                <div class="links">
+                <!-- <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
@@ -93,7 +96,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </body>

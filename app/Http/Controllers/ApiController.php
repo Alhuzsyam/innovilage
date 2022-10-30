@@ -15,17 +15,36 @@ class ApiController extends Controller
         $check = SensorModel::where('id',$id)->first();
         if($check){
             $value = DB::select('SELECT * FROM sensor1 WHERE id ='.$id);
-            return response()->json($value,200);
+            // return response()->json($value,200);
+            return response([
+                'status' => true,
+                'message' => 'sesnor dht',
+                'data' => $value,
+            ],200);
         }
         else{
             return response([
-                'status' => 'Not Found',
+                'status' => false,
                 'message' => 'sensor does not exist',
             ],404);
         }
     }
     public function get_all_sensor1(){
-        return response ()->json(SensorModel::all(), 200);
+        $data = SensorModel::all();
+        // return count(json_decode($data,1));
+        if(count(json_decode($data,1))==0){
+            return response([
+                'status' => false,
+                'message' => 'sensor data does not exist',
+                // 'data' => $data,
+            ],404);
+        }else{ 
+            return response([
+                'status' => true,
+                'message' => 'sensor dht',
+                'data' => $data,
+            ],200);
+        }
     }
     public function insert_sensor1(Request $req){
         $insert_S1 = new SensorModel;
@@ -35,7 +54,7 @@ class ApiController extends Controller
         $insert_S1->save();
 
         return response([
-            'status' => 'OK',
+            'status' => true,
             'message' => 'sesnor uploded',
             'data' => $insert_S1
         ],200);
@@ -45,7 +64,12 @@ class ApiController extends Controller
         $check = Sensor2Model::where('id',$id)->first();
         if($check){
             $value = DB::select('SELECT * FROM sensor2 WHERE id ='.$id);
-            return response()->json($value,200);
+            // return response()->json($value,200);
+            return response([
+                'status' => true,
+                'message' => 'sensor RFID',
+                'data' => $value,
+            ],200);
         }
         else{
             return response([
@@ -56,7 +80,21 @@ class ApiController extends Controller
     }
 
     public function get_all_sensor2(){
-        return response ()->json(Sensor2Model::all(), 200);
+        $data = Sensor2Model::all();
+        // return response ()->json(Sensor2Model::all(), 200);
+        if(count(json_decode($data,1))==0){
+            return response([
+                'status' => false,
+                'message' => 'sensor data does not exist',
+                // 'data' => $data,
+            ],404);
+        }else{
+            return response([
+                'status' => true,
+                'message' => 'sensor RFID',
+                'data' => $data,
+            ],200);
+        }
     }
 
     public function insert_sensor2(Request $req){
@@ -66,7 +104,7 @@ class ApiController extends Controller
         $insert_S2->save();
 
         return response([
-            'status' => 'OK',
+            'status' => true,
             'message' => 'sesnor uploded',
             'data' => $insert_S2
         ],200);
@@ -76,7 +114,12 @@ class ApiController extends Controller
         $check = Sensor3Model::where('id',$id)->first();
         if($check){
             $value = DB::select('SELECT * FROM sensor3 WHERE id ='.$id);
-            return response()->json($value,200);
+            // return response()->json($value,200);
+            return response([
+                'status' => true,
+                'message' => 'sensor GY302',
+                'data' => $value,
+            ],200);
         }
         else{
             return response([
@@ -87,7 +130,21 @@ class ApiController extends Controller
     }
 
     public function get_all_sensor3(){
-        return response ()->json(Sensor3Model::all(), 200);
+        // return response ()->json(Sensor3Model::all(), 200);
+        $data = Sensor3Model::all();
+        if(count(json_decode($data,1))==0){
+            return response([
+                'status' => false,
+                'message' => 'sensor data does not exist',
+                // 'data' => $data,
+            ],404);
+        }else{
+            return response([
+                'status' => true,
+                'message' => 'sensor GY302',
+                'data' => $data,
+            ],200);
+        }
     }
 
     public function insert_sensor3(Request $req){
@@ -107,7 +164,12 @@ class ApiController extends Controller
         $check = Sensor4Model::where('id',$id)->first();
         if($check){
             $value = DB::select('SELECT * FROM sensor4 WHERE id ='.$id);
-            return response()->json($value,200);
+            // return response()->json($value,200);
+            return response([
+                'status' => true,
+                'message' => 'sensor Amonia',
+                'data' => $value,
+            ],200);
         }
         else{
             return response([
@@ -118,7 +180,21 @@ class ApiController extends Controller
     }
 
     public function get_all_sensor4(){
-        return response ()->json(Sensor4Model::all(), 200);
+        $data = Sensor4Model::all();
+        // return response ()->json(Sensor4Model::all(), 200);
+        if(count(json_decode($data,1))==0){
+            return response([
+                'status' => false,
+                'message' => 'sensor data does not exist',
+                // 'data' => $data,
+            ],404);
+        }else{
+            return response([
+                'status' => true,
+                'message' => 'sensor Amonia',
+                'data' => $data,
+            ],200);
+        }
     }
 
     public function insert_sensor4(Request $req){
@@ -144,8 +220,8 @@ class ApiController extends Controller
         $saklar->save();
 
         return response([
-            'status' => 'OK',
-            'message' => 'sesnor uploded',
+            'status' => true,
+            'message' => 'switch has been inputted',
             'data' => $saklar
         ],200);
     }
@@ -157,8 +233,8 @@ class ApiController extends Controller
             $saklar->value=$req->saklar;
             $saklar->save();
             return response([
-                'status' => 'OK',
-                'message' => 'udated',
+                'status' => true,
+                'message' => 'updated',
                 'data' => $saklar
             ],200);
         }
@@ -177,7 +253,7 @@ class ApiController extends Controller
             $saklar->delete();
             return response([
                 'status' => 'OK',
-                'message' => 'Saklar ('.$id.') has deleted',
+                'message' => 'Saklar ('.$id.') has been deleted',
                 'data' => $saklar
             ],200);
         }
