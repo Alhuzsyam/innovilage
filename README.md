@@ -15,27 +15,32 @@
 <b> Get data Dht Sensor by per id </b>
 `http://oyifarm.com/api/datasensor1/id/{id}`
 
-<b> Get data RFID Sensor by per id </b>
+<b> Get all data RFID Sensor  </b>
 `http://oyifarm.com/api/datasensor2`
 
 <b> Get data RFID Sensor by per id </b>
 `http://oyifarm.com/api/datasensor2/id/{id}`
 
 
-<b> Get data GY302 Sensor by per id </b>
+<b> Get all data GY302 Sensor </b>
 `http://oyifarm.com/api/datasensor3`
 
-## Get data GY302 Sensor by per id
+<b> Get data GY302 Sensor by per id </b>
 `http://oyifarm.com/api/datasensor3/id/{id}`
 
-## Get data Amonia Sensor by per id
+<b> Get all data Amonia Sensor </b>
 `http://oyifarm.com/api/datasensor4`
 
-## Get data Amonia Sensor by per id
+<b> Get data Amonia Sensor by per id </b>
 `http://oyifarm.com/api/datasensor4/id/{id}`
 
-## POST Dht Sensor data
+<b> POST Dht Sensor data </b>
 `http://oyifarm.com/api/sensor/datasensor1`
+`body{
+    id : 1,
+    suhu : 20,
+    kelembapan : 80
+}`
 
 
 
