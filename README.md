@@ -9,32 +9,32 @@
 
 ## Smart Goat API URL
 
-#Get all data Dht Sensor
+<b> Get all data Dht Sensor </b>
 `http://oyifarm.com/api/datasensor1`
 
-#Get data Dht Sensor by per id
+<b> Get data Dht Sensor by per id </b>
 `http://oyifarm.com/api/datasensor1/id/{id}`
 
-#Get data RFID Sensor by per id
+<b> Get data RFID Sensor by per id </b>
 `http://oyifarm.com/api/datasensor2`
 
-#Get data RFID Sensor by per id
+<b> Get data RFID Sensor by per id </b>
 `http://oyifarm.com/api/datasensor2/id/{id}`
 
 
-#Get data GY302 Sensor by per id
+<b> Get data GY302 Sensor by per id </b>
 `http://oyifarm.com/api/datasensor3`
 
-#Get data GY302 Sensor by per id
+## Get data GY302 Sensor by per id
 `http://oyifarm.com/api/datasensor3/id/{id}`
 
-#Get data Amonia Sensor by per id
+## Get data Amonia Sensor by per id
 `http://oyifarm.com/api/datasensor4`
 
-#Get data Amonia Sensor by per id
+## Get data Amonia Sensor by per id
 `http://oyifarm.com/api/datasensor4/id/{id}`
 
-#POST Dht Sensor data
+## POST Dht Sensor data
 `http://oyifarm.com/api/sensor/datasensor1`
 
 
