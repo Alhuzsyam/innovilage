@@ -37,12 +37,39 @@
 <b> POST Dht Sensor data </b>
 `http://oyifarm.com/api/sensor/datasensor1`
 `body{
-    id : 1,
-    suhu : 20,
-    kelembapan : 80
+    id : value,
+    suhu : value,
+    kelembapan : value
 }`
 
 
+<b> POST rfid Sensor data </b>
+`http://oyifarm.com/api/sensor/datasensor2`
+`
+body{
+    id: value,
+    rfid: value
+}
+`
+
+<b> POST intensitas Sensor data </b>
+`http://oyifarm.com/api/sensor/datasensor3`
+`
+body{
+    id: value,
+    intensitas: value
+}
+`
+
+
+<b> POST amonia Sensor data </b>
+`http://oyifarm.com/api/sensor/datasensor4`
+`
+body{
+    id: value,
+    amonia: value
+}
+`
 
 <!-- Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
