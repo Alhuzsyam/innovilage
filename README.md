@@ -73,6 +73,11 @@ body{
 <b> POST data intensitas (saklar) </b>
 `http://oyifarm.com/api/saklar/saklar1`
 
+`body{
+    id:value,
+    saklar:value
+}`
+
 
 
 
