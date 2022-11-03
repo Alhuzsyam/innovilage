@@ -79,6 +79,8 @@ body{
 
 <b> GET all data saklar/intensitas </b> `http://oyifarm.com/api/saklar/saklar1/`
 
+<b> DELETE all data saklar/intensitas </b> `http://oyifarm.com/api/saklar/saklar1/delete/{id}`
+
 
 <!-- Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 

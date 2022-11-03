@@ -214,16 +214,25 @@ class ApiController extends Controller
     }
 
     public function insert_saklar(Request $req){
+        $check = SaklarModel::firstwhere('id',$req->id);
         $saklar= new SaklarModel;
         $saklar->id=$req->id;
         $saklar->value=$req->saklar;
-        $saklar->save();
-
-        return response([
-            'status' => true,
-            'message' => 'switch has been inputted',
-            'data' => $saklar
-        ],200);
+        
+        if($check){
+            return response([
+                'status' => false,
+                'message' => 'data has been registered',
+            ],500);
+        }
+        else{
+            $saklar->save();
+            return response([
+                'status' => true,
+                'message' => 'sucess uploaded',
+                'data' => $saklar
+            ],200);
+        }
     }
 
     public function update_saklar(Request $req,$id){
