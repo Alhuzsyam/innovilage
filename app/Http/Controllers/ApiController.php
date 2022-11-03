@@ -261,7 +261,7 @@ class ApiController extends Controller
             $saklar->value=$req->saklar;
             $saklar->delete();
             return response([
-                'status' => 'OK',
+                'status' => true,
                 'message' => 'Saklar ('.$id.') has been deleted',
                 'data' => $saklar
             ],200);
@@ -271,6 +271,46 @@ class ApiController extends Controller
                 'status' => 'Not Found',
                 'message' => 'switch does not exist',
             ],404);
+        }
+    }
+    public function delete_all(Request $req, $id){
+        $dht ='dht';
+        $rfid ='rfid';
+        $intensitas ='intensitas';
+        $amonia ='amonia';
+        if($id == $dht){
+            $data = SensorModel::truncate();
+            return response([
+                'status' => true,
+                'message' => 'All sensor ('.$dht.') has been deleted',
+            ],200);
+        }
+        else if($id == $rfid){
+            $data = Sensor2Model::truncate();
+            return response([
+                'status' => true,
+                'message' => 'All  ('.$rfid.') data  has been deleted',
+            ],200);
+        }
+        else if($id == $intensitas){
+            $data = Sensor3Model::truncate();
+            return response([
+                'status' => true,
+                'message' => 'All  ('.$intensitas.') data  has been deleted',
+            ],200);
+        }
+        else if($id == $amonia){
+            $data = Sensor4Model::truncate();
+            return response([
+                'status' => true,
+                'message' => 'All  ('.$amonia.') data  has been deleted',
+            ],200);
+        }
+        else{
+            return response([
+                'status' => 'Not Found',
+                'message' => 'data model does not exist',
+            ],404); 
         }
     }
 }

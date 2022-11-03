@@ -37,3 +37,4 @@ Route::post('sensor/datasensor4','ApiController@insert_sensor4');
 Route::post('saklar/saklar1','ApiController@insert_saklar');
 Route::put('saklar/saklar1/update/{id}','ApiController@update_saklar');
 Route::delete('saklar/saklar1/delete/{id}','ApiController@delete_saklar');
+Route::delete('data/alldata/{id}','ApiController@delete_all');
