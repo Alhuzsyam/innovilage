@@ -72,10 +72,18 @@ body{
 `
 
 <b> POST data intensitas (saklar) </b>
+`https://oyifarm.com/api/address/ip/add` `body{ name:value, ip:value }`
+
+<b> POST data intensitas (saklar) </b>
 `http://oyifarm.com/api/saklar/saklar1``body{ id:value,saklar:value}`
 
-<b>PUT data nilai intensitas</b>
+<b>PUT {edit} data nilai intensitas</b>
 `http://oyifarm.com/api/saklar/saklar1/update/{id}` `body{ id:{id},saklar:value}`
+
+<b> PUT (edit) data IP  </b> `http://oyifarm.com/api/address/ip/update/id/{id}`
+
+<b> GET data IP  </b> `http://oyifarm.com/api/address/ip/{id}` `body{ip : value}`
+<b> DELETE data IP  </b> `http://oyifarm.com/api/address/ip/delete/id/{id}`
 
 <b> GET all data saklar/intensitas </b> `http://oyifarm.com/api/saklar/saklar1/`
 

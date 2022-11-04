@@ -29,12 +29,17 @@ Route::get('datasensor1/id/{id}','ApiController@get_sensor1');
 Route::get('datasensor2/id/{id}','ApiController@get_sensor2');
 Route::get('datasensor3/id/{id}','ApiController@get_sensor3');
 Route::get('datasensor4/id/{id}','ApiController@get_sensor4');
+Route::get('address/ip/{id}','ApiController@ip_address');
 
+// post data
+Route::post('address/ip/add','ApiController@insert_ip');
 Route::post('sensor/datasensor1','ApiController@insert_sensor1');
 Route::post('sensor/datasensor2','ApiController@insert_sensor2');
 Route::post('sensor/datasensor3','ApiController@insert_sensor3');
 Route::post('sensor/datasensor4','ApiController@insert_sensor4');
 Route::post('saklar/saklar1','ApiController@insert_saklar');
 Route::put('saklar/saklar1/update/{id}','ApiController@update_saklar');
+Route::put('address/ip/update/id/{id}','ApiController@update_ip');
 Route::delete('saklar/saklar1/delete/{id}','ApiController@delete_saklar');
 Route::delete('data/alldata/{id}','ApiController@delete_all');
+Route::delete('address/ip/delete/id/{id}','ApiController@delete_ip');

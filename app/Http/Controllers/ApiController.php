@@ -8,6 +8,7 @@ use App\Sensor2Model;
 use App\Sensor3Model;
 use App\Sensor4Model;
 use App\SaklarModel;
+use App\OtaModel;
 use Illuminate\Support\Facades\DB;
 class ApiController extends Controller
 {
@@ -311,6 +312,85 @@ class ApiController extends Controller
                 'status' => 'Not Found',
                 'message' => 'data model does not exist',
             ],404); 
+        }
+    }
+
+    public function ip_address($id){
+        $check = OtaModel::where('id',$id)->first();
+        if($check){
+            $value = DB::select('SELECT * FROM ota_models WHERE id ='.$id);
+            // return response()->json($value,200);
+            return response([
+                'status' => true,
+                'message' => 'IP Address',
+                'data' => $value,
+            ],200);
+        }
+        else{
+            return response([
+                'status' => false,
+                'message' => 'IP does not exist',
+            ],404);
+        }
+    }
+    public function insert_ip(Request $req){
+        $check = OtaModel::firstwhere('id',$req->id);
+        $ip= new OtaModel;
+        // $ip->id=$req->id;
+        $ip->name=$req->name;
+        $ip->ip=$req->ip;
+        
+        if($check){
+            return response([
+                'status' => false,
+                'message' => 'data has been registered',
+            ],500);
+        }
+        else{
+            $ip->save();
+            return response([
+                'status' => true,
+                'message' => 'sucess uploaded',
+                'data' => $ip
+            ],200);
+        }
+    }
+    public function delete_ip(Request $req,$id){
+        $check = OtaModel::firstwhere('id',$id);
+    
+        if($check){
+            $ip = OtaModel::find($id);
+            $ip->delete();
+            return response([
+                'status' => true,
+                'message' => 'IP with the ('.$ip->ip.') has been deleted',
+                // 'data' => $ip
+            ],200);
+        }
+        else{
+            return response([
+                'status' => false,
+                'message' => 'switch does not exist',
+            ],404);
+        }
+    }
+    public function update_ip(Request $req,$id){
+        $check = OtaModel::firstwhere('id',$id);
+        if($check){
+            $ip = OtaModel::find($id);
+            $ip->ip=$req->ip;
+            $ip->save();
+            return response([
+                'status' => true,
+                'message' => 'updated',
+                'data' => $ip
+            ],200);
+        }
+        else{
+            return response([
+                'status' => false,
+                'message' => 'switch does not exist',
+            ],404);
         }
     }
 }
