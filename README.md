@@ -71,7 +71,7 @@ body{
 }
 `
 
-<b> POST data intensitas (saklar) </b>
+<b> POST data IP Address </b>
 `https://oyifarm.com/api/address/ip/add` `body{ name:value, ip:value }`
 
 <b> POST data intensitas (saklar) </b>
