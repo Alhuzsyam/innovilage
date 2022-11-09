@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\http\Controller\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,7 @@ Route::put('address/ip/update/id/{id}','ApiController@update_ip');
 Route::delete('saklar/saklar1/delete/{id}','ApiController@delete_saklar');
 Route::delete('data/alldata/{id}','ApiController@delete_all');
 Route::delete('address/ip/delete/id/{id}','ApiController@delete_ip');
+
+// upload image
+Route::post('image/upload/','ApiController@upload');
+

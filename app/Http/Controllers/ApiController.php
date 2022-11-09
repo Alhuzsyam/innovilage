@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Image;
 use App\SensorModel;
 use App\Sensor2Model;
 use App\Sensor3Model;
@@ -370,7 +371,7 @@ class ApiController extends Controller
         else{
             return response([
                 'status' => false,
-                'message' => 'switch does not exist',
+                'message' => 'IP does not exist',
             ],404);
         }
     }
@@ -391,6 +392,27 @@ class ApiController extends Controller
                 'status' => false,
                 'message' => 'switch does not exist',
             ],404);
+        }
+    }
+    public function upload(Request $req){
+        $image = $req->file('image');
+        if($req->hasFile('image')){
+            $img = new Image;
+            $img->id=$req->id;
+            $img->name=$req->name;
+            $new_name = $req->name.'.'.$image->getClientOriginalExtension();
+            $img->name = $new_name;
+            $image->move(public_path('/assets/image/'),$new_name);
+            $img->save();
+            return response([
+                'status' => true,
+                'message' => 'image uploded',
+                'data' => $new_name
+            ],200);
+            // return response()->json($new_name);
+        }
+        else{
+            return response()->json('image null');
         }
     }
 }

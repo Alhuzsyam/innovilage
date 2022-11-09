@@ -10,32 +10,32 @@
 ## Smart Goat API URL
 
 <b> Get all data Dht Sensor </b>
-`http://oyifarm.com/api/datasensor1`
+` https://apigoat.oyifarm.com/api/datasensor1`
 
 <b> Get data Dht Sensor by per id </b>
-`http://oyifarm.com/api/datasensor1/id/{id}`
+` https://apigoat.oyifarm.com/api/datasensor1/id/{id}`
 
 <b> Get all data RFID Sensor  </b>
 `http://oyifarm.com/api/datasensor2`
 
 <b> Get data RFID Sensor by per id </b>
-`http://oyifarm.com/api/datasensor2/id/{id}`
+` https://apigoat.oyifarm.com/api/datasensor2/id/{id}`
 
 
 <b> Get all data GY302 Sensor </b>
-`http://oyifarm.com/api/datasensor3`
+` https://apigoat.oyifarm.com/api/datasensor3`
 
 <b> Get data GY302 Sensor by per id </b>
-`http://oyifarm.com/api/datasensor3/id/{id}`
+` https://apigoat.oyifarm.com/api/datasensor3/id/{id}`
 
 <b> Get all data Amonia Sensor </b>
-`http://oyifarm.com/api/datasensor4`
+` https://apigoat.oyifarm.com/api/datasensor4`
 
 <b> Get data Amonia Sensor by per id </b>
-`http://oyifarm.com/api/datasensor4/id/{id}`
+` https://apigoat.oyifarm.com/api/datasensor4/id/{id}`
 
 <b> POST Dht Sensor data </b>
-`http://oyifarm.com/api/sensor/datasensor1`
+` https://apigoat.oyifarm.com/api/sensor/datasensor1`
 `body{
     id : value,
     suhu : value,
@@ -44,7 +44,7 @@
 
 
 <b> POST rfid Sensor data </b>
-`http://oyifarm.com/api/sensor/datasensor2`
+`https://apigoat.oyifarm.com/api/sensor/datasensor2`
 `
 body{
     id: value,
@@ -53,7 +53,7 @@ body{
 `
 
 <b> POST intensitas Sensor data </b>
-`http://oyifarm.com/api/sensor/datasensor3`
+` https://apigoat.oyifarm.com/api/sensor/datasensor3`
 `
 body{
     id: value,
@@ -63,7 +63,7 @@ body{
 
 
 <b> POST amonia Sensor data </b>
-`http://oyifarm.com/api/sensor/datasensor4`
+` https://apigoat.oyifarm.com/api/sensor/datasensor4`
 `
 body{
     id: value,
@@ -72,24 +72,24 @@ body{
 `
 
 <b> POST data intensitas (saklar) </b>
-`https://oyifarm.com/api/address/ip/add` `body{ name:value, ip:value }`
+` https://apigoat.oyifarm.com/api/address/ip/add` `body{ name:value, ip:value }`
 
 <b> POST data intensitas (saklar) </b>
-`http://oyifarm.com/api/saklar/saklar1``body{ id:value,saklar:value}`
+` https://apigoat.oyifarm.com/api/saklar/saklar1``body{ id:value,saklar:value}`
 
 <b>PUT {edit} data nilai intensitas</b>
-`http://oyifarm.com/api/saklar/saklar1/update/{id}` `body{ id:{id},saklar:value}`
+` https://apigoat.oyifarm.com/api/saklar/saklar1/update/{id}` `body{ id:{id},saklar:value}`
 
-<b> PUT (edit) data IP  </b> `http://oyifarm.com/api/address/ip/update/id/{id}`
+<b> PUT (edit) data IP  </b> ` https://apigoat.oyifarm.com/api/address/ip/update/id/{id}`
 
-<b> GET data IP  </b> `http://oyifarm.com/api/address/ip/{id}` `body{ip : value}`
-<b> DELETE data IP  </b> `http://oyifarm.com/api/address/ip/delete/id/{id}`
+<b> GET data IP  </b> ` https://apigoat.oyifarm.com/api/address/ip/{id}` `body{ip : value}`
+<b> DELETE data IP  </b> ` https://apigoat.oyifarm.com/api/address/ip/delete/id/{id}`
 
-<b> GET all data saklar/intensitas </b> `http://oyifarm.com/api/saklar/saklar1/`
+<b> GET all data saklar/intensitas </b> ` https://apigoat.oyifarm.com/api/saklar/saklar1/`
 
-<b> DELETE all data saklar/intensitas </b> `http://oyifarm.com/api/saklar/saklar1/delete/{id}`
+<b> DELETE all data saklar/intensitas </b> ` https://apigoat.oyifarm.com/api/saklar/saklar1/delete/{id}`
 
-<b>Delete all data model<b> `http://oyifarm.com/api/data/alldata/{model name}`
+<b>Delete all data model<b> ` https://apigoat.oyifarm.com/api/data/alldata/{model name}`
 `
 list model name = dht,intensitas,rfid,amonia
 `
