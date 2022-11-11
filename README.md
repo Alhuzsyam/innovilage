@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://oyifarm.com/assets/image/logo.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="http://apigoat.oyifarm.com/assets/image/logo.png" width="400"></a></p>
 <!-- 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -93,8 +93,10 @@ body{
 `
 list model name = dht,intensitas,rfid,amonia
 `
-<b>POST Image (Upload Gambar)</b>
-`http://apigoat.oyifarm.com/api/image/upload` 
+<br>
+
+<b>POST Image (Upload Gambar)</b> `http://apigoat.oyifarm.com/api/image/upload` 
+
 `body{id:value, name:value, image:value}`
 
 
