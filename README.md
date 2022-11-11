@@ -93,6 +93,9 @@ body{
 `
 list model name = dht,intensitas,rfid,amonia
 `
+<b>POST Image (Upload Gambar)</b>
+`http://apigoat.oyifarm.com/api/image/upload` 
+`body{id:value, name:value, image:value}`
 
 
 <!-- Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
